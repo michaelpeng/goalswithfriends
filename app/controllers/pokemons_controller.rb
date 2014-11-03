@@ -25,9 +25,10 @@ class PokemonsController < ApplicationController
   	if @pokemon.save
   		id = Trainer.find(@pokemon.trainer_id)
   		redirect_to trainer_path(id)
-  	end
-  	flash[:error] = @pokemon.errors.full_messages.to_sentence
-  	render 'new'
+    else
+  	 flash[:error] = @pokemon.errors.full_messages.to_sentence
+  	 render 'new'
+    end
   end
 
   private
