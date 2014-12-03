@@ -1,4 +1,4 @@
-Title: Games with Friends!
+Title: Goals with Friends!
 
 Team Members: Michael Peng, Nag Alluri
 
