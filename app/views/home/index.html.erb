@@ -1,7 +1,6 @@
-<h3>Welcome to PokePortal</h3>
-<p><%= link_to 'Trainers:', trainers_path %> <%= Trainer.count %> registered</p>
+<h3>Welcome to Goals with Friends!</h3>
+<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
 
-<% if @pokemon and current_trainer %>
-  <p> A wild <%= @pokemon.name %> has appeared!</p>
-  <%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>
+<% if @user and current_user %>
+  <p> A wild <%= @user.name %> has appeared!</p>
 <% end %>

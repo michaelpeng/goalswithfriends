@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    trainerless_pokemon = Pokemon.where(trainer:nil)
-    @pokemon = trainerless_pokemon.sample
+    listed_user = User.where(list_me:true)
+    @user = listed_user.sample
   end
 
 end
