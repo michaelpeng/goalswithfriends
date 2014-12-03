@@ -1,4 +1,4 @@
-Title: RailsDeCal
+Title: Games with Friends!
 
 Team Members: Michael Peng, Nag Alluri
 
