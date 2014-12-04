@@ -1,6 +1,11 @@
-<h3>Welcome to Goals with Friends!</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<h2 style="color:turquoise">Welcome to Goals with Friends!</h2>
+<p>Where you can manage and share your goals with others.</p>
+<br>
 
+<h4 style="color:turquoise">It's a random friend!</h4>
 <% if @user and current_user %>
-  <p> A wild <%= @user.name %> has appeared!</p>
+  <p> Why not check up on <%= link_to @user.name, user_path(@user.id) %> ?</p>
 <% end %>
+<br>
+
+<p style="color:grey"><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
