@@ -22,5 +22,5 @@ Features:
 * users can comment on goals
 
 Division of Labor:
-* Michael: initial port from PokePortal Project
+* Michael: initial port from PokePortal Project, goal implementation
 * Nag: views and goal finetuning
