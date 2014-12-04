@@ -3,17 +3,24 @@
 <p><h4>Email:</h4> <%= @user.email if @user.email %></p>
 <p><h4>Goals:</h4></p>
   <ul>
+  	<h5>In Progress:</h5>
   	<% @user.goals.each do |goal| %>
   	  <p>
+  	  	<% if !goal.completed %>
   	  	<%= link_to goal.name, goal_path(goal.id) %>
+  	  	<% end %>
   	  </p>
-  	  <!-- <p><h5><%= goal.name %>:</h5>
-  	  <% if @user.id == current_user.id %>
-  	  <%= goal.text %>  <%= link_to 'Edit', edit_goal_path(goal) %> </p>
-  	  <% else %>
-  	  <p><%= goal.text %></p>
-  	  <% end %> -->
   	<% end %>
+  	<br>
+  	<h5>Completed:</h5>
+  	<% @user.goals.each do |goal| %>
+  	  <p>
+  	  	<% if goal.completed %>
+  	  	<%= link_to goal.name, goal_path(goal.id) %>
+  	  	<% end %>
+  	  </p>
+  	<% end %>
+  	<br>
   	<br>
   </ul>
 
