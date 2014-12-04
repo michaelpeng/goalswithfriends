@@ -1,0 +1,17 @@
+<p>
+	<h2>Goal: <%= @goal.name %></h2>
+</p>
+<% if @goal.user_id == current_user.id %>
+	<p><h4>Details:</h4> <%= @goal.text %></p>
+<% else %>
+
+<p><%= @goal.text %></p>
+<% end %>
+<p><h4>Status:</h4>
+<% if @goal.completed == true %>
+	Completed! Nice job!</p>
+<%else %>
+	In progress. You got this!</p>
+<% end %>
+
+<p><%= link_to 'Edit', edit_goal_path(@goal) %></p>

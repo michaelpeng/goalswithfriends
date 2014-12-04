@@ -4,6 +4,10 @@ class GoalsController < ApplicationController
     @goal = @user.goals.build
   end
 
+  def show
+    @goal = Goal.find(params[:id])
+  end
+
   def create
     @goal = Goal.new goal_params
     if @goal.save
@@ -31,6 +35,6 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-    params.require(:goal).permit(:name, :text, :user_id)
+    params.require(:goal).permit(:name, :text, :user_id, :completed)
   end
 end
